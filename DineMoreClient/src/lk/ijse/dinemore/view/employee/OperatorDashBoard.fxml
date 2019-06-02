@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="787.0" prefWidth="1167.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.operator.OperatorDashBoardController">
+   <children>
+      <HBox prefHeight="51.0" prefWidth="1171.0" style="-fx-background-color: #2b2727;">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Contact_Info_48px.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="50.0" prefWidth="175.0" text="Operator" textFill="#fffdfd">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="51.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/dinemore.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Button fx:id="btnMakeOrder" layoutX="18.0" layoutY="69.0" mnemonicParsing="false" onAction="#makeOrderOnAction" prefHeight="42.0" prefWidth="167.0" style="-fx-background-color: #f73f02;" text="Customer Order" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnManageCustomers" layoutX="203.0" layoutY="69.0" mnemonicParsing="false" onAction="#manageCustomersOnAction" prefHeight="42.0" prefWidth="198.0" style="-fx-background-color: #f73f02;" text="Manage Customers" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="operatorMiddlePane" layoutX="16.0" layoutY="131.0" prefHeight="642.0" prefWidth="1139.0" />
+      <HBox layoutX="1073.0" layoutY="1.0" prefHeight="51.0" prefWidth="98.0">
+         <children>
+            <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Minimize_Window_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Close_Window_96px_2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Button fx:id="btnManageOrders" layoutX="418.0" layoutY="69.0" mnemonicParsing="false" onAction="#manageOrdersOnAction" prefHeight="42.0" prefWidth="198.0" style="-fx-background-color: #f73f02;" text="Manage Orders" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

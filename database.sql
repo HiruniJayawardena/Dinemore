@@ -1,0 +1,147 @@
+DROP DATABASE Dinemore;
+CREATE DATABASE Dinemore;
+
+USE Dinemore;
+
+DROP TABLE Operators;
+CREATE TABLE Operators(
+	operatorId VARCHAR(15) NOT NULL,
+	operatorName VARCHAR(35),
+	operatorAddress VARCHAR(35),
+	operatorContactNo VARCHAR(10),
+	operatorSalary VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(operatorId)
+)ENGINE=INNODB;
+
+CREATE TABLE Payment(
+	paymentID VARCHAR(15) NOT NULL,
+	paymentMethod VARCHAR(35),
+	amount DOUBLE(10,2),
+	CONSTRAINT PRIMARY KEY(paymentID)
+)ENGINE=INNODB;
+
+CREATE TABLE Chef(
+	chefId VARCHAR(15) NOT NULL,
+	chefName VARCHAR(35),
+	chefAddress VARCHAR(35),
+	chefContactNo VARCHAR(10),
+	chefSalary DOUBLE(10,2),
+	CONSTRAINT PRIMARY KEY(chefId)
+)ENGINE=INNODB;
+
+CREATE TABLE Customer(
+	customerId VARCHAR(15) NOT NULL,
+	customerName VARCHAR(35),
+	customerNIC VARCHAR(11),
+	customerTP int(10),
+	houseNo VARCHAR(10),
+	landMark VARCHAR(25),
+	town VARCHAR(20),
+	cardType VARCHAR(10),
+	cardNo int(20),
+	expireDate VARCHAR(10),
+	CONSTRAINT PRIMARY KEY(customerId)
+)ENGINE=INNODB;
+
+CREATE TABLE Deliverer(
+	delivererId VARCHAR(15) NOT NULL,
+	delivererName VARCHAR(35),  
+	delivererAddress VARCHAR(35),
+	delivererContactNo VARCHAR(10),
+	delivererSalary DOUBLE(10,2),
+	CONSTRAINT PRIMARY KEY(delivererId)
+)ENGINE=INNODB;
+
+CREATE TABLE Item(
+	itemCode VARCHAR(15) NOT NULL,
+	itemName VARCHAR(35),
+	price DOUBLE(10,2),
+	CONSTRAINT PRIMARY KEY(itemCode)
+)ENGINE=INNODB;
+
+DROP TABLE Orders;
+CREATE TABLE Orders(
+	orderID VARCHAR(15) NOT NULL,
+	operatorId VARCHAR(15),
+	customerId VARCHAR(15),
+	paymentID VARCHAR(15),
+	chefId VARCHAR(15),
+	delivererId VARCHAR(15),
+	qty int,
+	amount 	DOUBLE(10,2),
+	orderStatus VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(orderID),
+	CONSTRAINT FOREIGN KEY(operatorID) REFERENCES Operators(operatorID)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FOREIGN KEY(customerId) REFERENCES Customer(customerId)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FOREIGN KEY(paymentID) REFERENCES Payment(paymentID)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FOREIGN KEY(chefId) REFERENCES Chef(chefId)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FOREIGN KEY(delivererId) REFERENCES Deliverer(delivererId)
+	ON UPDATE CASCADE ON DELETE CASCADE
+)ENGINE=INNODB;
+
+
+CREATE TABLE OrderDetails(
+	orderDetailsID VARCHAR(15) NOT NULL,
+	orderID VARCHAR(15),
+	itemCode VARCHAR(30),
+	CONSTRAINT PRIMARY KEY(orderDetailsID),
+	CONSTRAINT FOREIGN KEY(orderID) REFERENCES Orders(orderID)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FOREIGN KEY(itemCode) REFERENCES Item(itemCode)
+	ON UPDATE CASCADE ON DELETE CASCADE
+)ENGINE=INNODB;
+
+CREATE TABLE AdminLogin(
+	adminUserName VARCHAR(30) NOT NULL,
+	adminPassword VARCHAR(30) NOT NULL
+)ENGINE=INNODB;
+
+CREATE TABLE OperatorLogin(
+	operatorUserName VARCHAR(30) NOT NULL,
+	operatorPassword VARCHAR(30) NOT NULL
+)ENGINE=INNODB;
+
+CREATE TABLE ChefLogin(
+	chefUserName VARCHAR(30) NOT NULL,
+	chefPassword VARCHAR(30) NOT NULL
+)ENGINE=INNODB;
+
+CREATE TABLE DelivererLogin(
+	delivererUserName VARCHAR(30) NOT NULL,
+	delivererPassword VARCHAR(30) NOT NULL
+)ENGINE=INNODB;
+
+INSERT INTO Item VALUES("I001","Chiken Submarine",100.00);
+INSERT INTO Item VALUES("I002","Beef Submarine",100.00);
+INSERT INTO Item VALUES("I003","Shrimp Submarine",100.00);
+INSERT INTO Item VALUES("I004","Tuna Submarine",100.00);
+INSERT INTO Item VALUES("I005","Vegitable submarine",100.00);
+INSERT INTO Item VALUES("I006","Devilled Beef Submarine",100.00);
+INSERT INTO Item VALUES("I007","Beef Burger",200.00);
+INSERT INTO Item VALUES("I008","Beef Burger with Cheese",300.00);
+INSERT INTO Item VALUES("I009","Beef Burger with Egg",200.00);
+INSERT INTO Item VALUES("I010","Chicken Burger with Cheese",200.00);
+INSERT INTO Item VALUES("I011","Chicken Burger",200.00);
+INSERT INTO Item VALUES("I012","Grilled Chicken Burger",200.00);
+INSERT INTO Item VALUES("I013","Club Sandwich",75.00);
+INSERT INTO Item VALUES("I014","Steak Sandwich",75.00);
+INSERT INTO Item VALUES("I015","Thandoori Sandwich",75.00);
+INSERT INTO Item VALUES("I016","Butter Chicken",75.00);
+INSERT INTO Item VALUES("I017","Prawn Masala",75.00);
+INSERT INTO Item VALUES("I018","Thandoori Chicken",150.00);
+INSERT INTO Item VALUES("I019","Beef Chops",120.00);
+INSERT INTO Item VALUES("I020","Chicken Tikka Masala",200.00);
+INSERT INTO Item VALUES("I021","Strawberry Lassie",150.00);
+INSERT INTO Item VALUES("I022","Manago Lassie",180.00);
+INSERT INTO Item VALUES("I023","Chocolate Milk Shake",200.00);
+INSERT INTO Item VALUES("I024","Strawberry Milk Shake",240.00);
+INSERT INTO Item VALUES("I025","Ice Coffee Shake",160.00);
+INSERT INTO Item VALUES("I026","Faluda",150.00);
+INSERT INTO Item VALUES("I027","Banana Milk Shake",130.00);
+INSERT INTO Item VALUES("I028","Biscuit Pudding",170.00);
+INSERT INTO Item VALUES("I029","Mango Milk shake",200.00);
+INSERT INTO Item VALUES("I030","Banana Boat",140.00);

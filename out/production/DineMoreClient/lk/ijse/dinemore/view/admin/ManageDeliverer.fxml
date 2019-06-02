@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="642.0" prefWidth="1139.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.Admin.ManageDelivererConttroller">
+   <children>
+      <JFXButton fx:id="btnDelivererSave" layoutX="936.0" layoutY="102.0" onAction="#saveDelivererOnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #f73f02;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblDeliverer" layoutX="59.0" layoutY="285.0" prefHeight="334.0" prefWidth="1030.0">
+         <columns>
+            <TableColumn prefWidth="131.9999656677246" text="Deliverer Id" />
+            <TableColumn prefWidth="145.59996032714844" text="Deliverer Name" />
+            <TableColumn prefWidth="187.20001220703125" text="Deliverer Address" />
+            <TableColumn prefWidth="166.4000244140625" text="Deliverer NIC" />
+            <TableColumn prefWidth="193.60003662109375" text="Deliverer Contact" />
+            <TableColumn prefWidth="210.39996337890625" text="Deliverer Salary" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnDeleteDeliverer" layoutX="936.0" layoutY="202.0" onAction="#deleteDelivererOnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #f73f02;" text="Delete" textFill="#fafafa">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateDeliverer" layoutX="936.0" layoutY="156.0" onAction="#delivererUpdateOnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #f73f02;" text="Update" textFill="#f8f7f7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="45.0" layoutY="25.0" prefHeight="34.0" prefWidth="164.0" text="DELIVERER">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="56.0" prefHeight="0.0" prefWidth="182.0" />
+      <JFXTextField fx:id="txtDelivererId" focusColor="WHITE" labelFloat="true" layoutX="59.0" layoutY="89.0" onAction="#delivererIdOnAction" prefHeight="26.0" prefWidth="334.0" promptText="Deliverer Id:" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtDelivererName" focusColor="WHITE" labelFloat="true" layoutX="59.0" layoutY="143.0" onAction="#delivererNameOnAction" prefHeight="26.0" prefWidth="334.0" promptText="Deliverer Name:" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtDelivererAddress" focusColor="WHITE" labelFloat="true" layoutX="59.0" layoutY="202.0" onAction="#delivererAddressOnAction" prefHeight="26.0" prefWidth="334.0" promptText="Deliverer Address:" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtDelivererNIC" focusColor="WHITE" labelFloat="true" layoutX="487.0" layoutY="89.0" onAction="#delivererNICOnAction" prefHeight="26.0" prefWidth="334.0" promptText="Deliverer NIC:" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtDelivererContact" focusColor="WHITE" labelFloat="true" layoutX="487.0" layoutY="143.0" onAction="#delivererContactOnAction" prefHeight="26.0" prefWidth="334.0" promptText="Deliverer Contact No:" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtDelivererSalary" focusColor="WHITE" labelFloat="true" layoutX="487.0" layoutY="202.0" onAction="#delivererSalaryOnAction" prefHeight="26.0" prefWidth="334.0" promptText="Deliverer Salary:" style="-fx-background-color: white;" />
+      <TextField fx:id="txtDelivererSearch" layoutX="769.0" layoutY="22.0" onAction="#delivererSearchOnAction" prefHeight="34.0" prefWidth="251.0" />
+      <ImageView fitHeight="34.0" fitWidth="46.0" layoutX="1021.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/icons8_Search_48px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DineMoreClient/DineMoreClient.iml" filepath="$PROJECT_DIR$/DineMoreClient/DineMoreClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DineMoreCommon/DineMoreCommon.iml" filepath="$PROJECT_DIR$/DineMoreCommon/DineMoreCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DineMoreserver/DineMoreserver.iml" filepath="$PROJECT_DIR$/DineMoreserver/DineMoreserver.iml" />
+    </modules>
+  </component>
+</project>

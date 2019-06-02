@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="642.0" prefWidth="1139.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.Admin.ViewReportsController">
+   <children>
+      <Label layoutX="45.0" layoutY="25.0" prefHeight="34.0" prefWidth="200.0" text="VIEW REPORTS">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="56.0" prefHeight="1.0" prefWidth="238.0" />
+      <JFXButton fx:id="btnSaveChef" layoutX="95.0" layoutY="125.0" onAction="#saveChefOnAction" prefHeight="44.0" prefWidth="182.0" style="-fx-background-color: #f73f02;" text="Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

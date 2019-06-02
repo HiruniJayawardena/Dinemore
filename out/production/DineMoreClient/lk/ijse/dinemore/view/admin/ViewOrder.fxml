@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="642.0" prefWidth="1139.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.Admin.ViewOrderController">
+   <children>
+      <TableView fx:id="tblOrders" layoutX="35.0" layoutY="95.0" prefHeight="512.0" prefWidth="1068.0">
+         <columns>
+            <TableColumn prefWidth="131.9999656677246" text="Chef Id" />
+            <TableColumn prefWidth="145.59996032714844" text="Chef Name" />
+            <TableColumn prefWidth="187.20001220703125" text="Chef Address" />
+            <TableColumn prefWidth="166.4000244140625" text="Chef NIC" />
+            <TableColumn prefWidth="193.60003662109375" text="Chef Contact" />
+            <TableColumn prefWidth="210.39996337890625" text="Chef Salary" />
+         </columns>
+      </TableView>
+      <Label layoutX="45.0" layoutY="25.0" prefHeight="34.0" prefWidth="226.0" text="VIEW ORDERS">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="56.0" prefHeight="2.0" prefWidth="220.0" />
+      <TextField fx:id="txtOrderSearch" layoutX="769.0" layoutY="22.0" onAction="#orderSearchOnAction" prefHeight="34.0" prefWidth="251.0" />
+      <ImageView fitHeight="34.0" fitWidth="46.0" layoutX="1021.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/icons8_Search_48px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
